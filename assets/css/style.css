@@ -4,61 +4,61 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-    --header-height: 3rem;
+  --header-height: 3rem;
 
-    /*========== Colors ==========*/
-    /* Change favorite color */
-    --hue-color: ; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: ; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
-    /* HSL color mode */
-    --first-color:#3e0e12 ;
-    --first-color-second: #2f0a0d;
-    --text-color: #524748;
-    --first-color-light: #7b6f71;
-    --first-color-lighten: #fbf9f9;
+  /* HSL color mode */
+  --first-color:#3e0e12 ;
+  --first-color-second: #2f0a0d;
+  --text-color: #524748;
+  --first-color-light: #7b6f71;
+  --first-color-lighten: #fbf9f9;
 
-    /*========== Font and typography ==========*/
-    --body-font: 'Roboto', sans-serif;
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
 
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size:  1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size:  1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
 
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-    --font-bold:  700;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold:  700;
 
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-1: .5rem;
-    --mb-2: 1rem;
-    --mb-3: 1.5rem;
-    --mb-4: 2rem;
-    --mb-5: 2.5rem;
-    --mb-6:  3rem;
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6:  3rem;
 
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-normal: 1;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-normal: 1;
 }
 
 /* Font size for large devices */
 @media screen and (min-width: 768px) {
-    :root {--biggest-font-size: 4.5rem;
+  :root {--biggest-font-size: 4.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size:  1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
-    }
+  }
 }
 
 /*==================== BASE ====================*/
@@ -128,18 +128,109 @@ img{
 
 /*==================== LAYOUT ====================*/
 
+.bd-container{
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: #000;
+}
 
 /*==================== NAV ====================*/
 
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu{
+    top: -100%;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding-top: 1.5rem;
+    text-align: center;
+    background-color: #000;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+.nav__item {
+  margin-bottom: var(--mb-3);
+}
+
+.nav__link {
+  color: var(--first-color-lighten);
+  transition: .3s;
+}
+
+.nav__link:hover{
+  color: var(--first-color-light);
+}
+
+.nav__logo, .nav__toggle {
+  color: var(--first-color-lighten);
+}
+
+.nav__toggle{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
 
 /* show menu */
 
+.show-menu {
+  top: var(--header-height);
+}
 
 /* Active link */
 
+.active-link {
+  position: relative;
+}
+
+.active-link::after{
+  content: '';
+  position: absolute;
+  bottom: -.7rem;
+  left: 0;
+  width: 65%;
+  height: 3px;
+  background-color: var(--first-color-light);
+}
 
 /* Change background header */
 
+.scrolle-header{
+  background-color: var(--first-color-lighten);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
+  color: var(--first-color-dark);
+}
+
+.scroll-header .nav__menu{
+  background-color: var(--first-color-lighten);
+}
 
 /*==================== HOME ====================*/
 
