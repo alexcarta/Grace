@@ -1,5 +1,6 @@
 /*GOOGLE FONTS*/
 
+
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
@@ -16,7 +17,7 @@
   --first-color-second: #2f0a0d;
   --text-color: #524748;
   --first-color-light: #7b6f71;
-  --first-color-lighten: #fbf9f9;
+  --first-color-lighten: white;
 
   /*========== Font and typography ==========*/
   --body-font: 'MuseoModerno', cursive;
@@ -465,11 +466,13 @@ p{
 
 .services__data{
   padding: 3rem 1rem;
-  background-color: #FFF;
+  background-size: cover;
+  background-position: center;
   border-radius: .5rem;
   text-align: center;
   transition: .4s;
   box-shadow: 0 4px 6px rgba(174,190,205,.3 );
+  color: var(--first-color-lighten);
 }
 
 .services__icon,.services__title{
