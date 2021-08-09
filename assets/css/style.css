@@ -1,6 +1,7 @@
 /*GOOGLE FONTS*/
 
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -94,8 +95,9 @@ ul{
   list-style: none;
 }
 
-a{
+a, span{
   text-decoration: none !important;
+  font-family: 'Montserrat', sans-serif;
 }
 
 img{
@@ -104,6 +106,9 @@ img{
   display: block;
 }
 
+p{
+  font-family: 'Montserrat', sans-serif;
+}
 /*============== CSS CLASSES ================*/
 
 .section{
