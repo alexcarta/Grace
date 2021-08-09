@@ -59,9 +59,6 @@ window.addEventListener('scroll', scrollHeader)
 const tabs = document.querySelectorAll('[data-target');
 const tabContents = document.querySelectorAll('[data-content]')
 
-console.log(tabs)
-console.log(tabContents)
-
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const target = document.querySelector(tab.dataset.target)
@@ -80,7 +77,60 @@ tabs.forEach(tab => {
   })
 });
 
+// MODAL
 
+// Get the modal
+var modal1 = document.getElementById("myModal1");
+var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
+
+var modals = document.querySelectorAll(".modal")
+console.log(modals)
+
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn1");
+var btn2 = document.getElementById("myBtn2");
+var btn3 = document.getElementById("myBtn3");
+var btn4 = document.getElementById("myBtn4");
+
+// Get the <span> element that closes the modal
+var span1 = document.getElementById("close1");
+var span2 = document.getElementById("close2");
+var span3 = document.getElementById("close3");
+var span4 = document.getElementById("close4");
+
+
+// When the user clicks the button, open the modal
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+btn4.onclick = function() {
+  modal4.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+span3.onclick = function() {
+  modal3.style.display = "none";
+}
+
+span4.onclick = function() {
+  modal4.style.display = "none";
+}
 
 
 
