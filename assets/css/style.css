@@ -1,8 +1,6 @@
 /*GOOGLE FONTS*/
 
-
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -20,7 +18,8 @@
   --first-color-lighten: white;
 
   /*========== Font and typography ==========*/
-  --body-font: 'MuseoModerno', cursive;
+  --body-font: 'Comfortaa', cursive;
+;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --biggest-font-size: 2.5rem;
@@ -394,13 +393,17 @@ p{
 .qualification__tabs{
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-3);
 }
 
 .qualification__button {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   cursor: pointer;
+}
+
+.qualification__button:hover{
+  transform: scale(1.2)
 }
 
 .qualification__button:hover {
@@ -461,6 +464,11 @@ p{
   display: block;
 }
 
+.workshop__link{
+  text-decoration: underline;
+  color: var(--first-color);
+}
+
 
 /*==================== SERVICES ====================*/
 
@@ -476,8 +484,8 @@ p{
 }
 
 .services__icon,.services__title{
-  margin-bottom: var(--mb-2);
-  color: var(--first-color);
+  margin-left: var(--mb-2);
+  color: var(--first-color-lighten);
 }
 
 .services__icon{
@@ -497,9 +505,9 @@ services__title{
   box-shadow: 0 6px 8px rgba(174,190,205,.4);
 }
 
-/* Active Modal */
-
-.modal {
+/* Modal */
+#myModal1 {
+  display: none;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -512,12 +520,50 @@ services__title{
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.active-modal{
-  display: block;
+#myModal2 {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.unactive-modal{
+#myModal3 {
   display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#myModal4 {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-block {
+  display: block;
 }
 
 /* Modal Content */
@@ -543,6 +589,25 @@ services__title{
   text-decoration: none;
   cursor: pointer;
 }
+
+.modal__button {
+  margin-top: 100px;
+  background-color: transparent;
+  border: none;
+}
+
+.modal__button:hover{
+  transform: scale(1.2);
+}
+
+.modal__button-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 
 /*==================== GALLERY ====================*/
 
@@ -618,6 +683,7 @@ services__title{
 .contact__button{
   cursor: pointer;
   border: none;
+  justify-self: center;
 }
 
 /*==================== FOOTER ====================*/
