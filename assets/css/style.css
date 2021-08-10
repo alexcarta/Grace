@@ -97,7 +97,6 @@ ul{
 
 a, span{
   text-decoration: none !important;
-  font-family: 'Montserrat', sans-serif;
 }
 
 img{
@@ -107,7 +106,7 @@ img{
 }
 
 p{
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--body-font);
 }
 /*============== CSS CLASSES ================*/
 
@@ -229,13 +228,13 @@ p{
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
+/*.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
   color: var(--first-color-dark);
 }
-
-.scroll-header .nav__menu{
+*/
+/*.scroll-header .nav__menu{
   background-color: var(--first-color-lighten);
-}
+}*/
 
 /*==================== HOME ====================*/
 
@@ -626,20 +625,26 @@ services__title{
 }
 
 .contact__box{
+  width: 50%;
   background-color: #FFF;
   border-radius: .5rem;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align-last: center;
   box-shadow: 0 4px 6px rgba(174,190,205,.3);
+}
+
+.contact__loc-phone {
+  display: flex;
 }
 
 .contact__icon{
   font-size: 2rem;
 }
 
-.contact__title{
-  font-size: var(--h3-font-size);
+.contact__title, .contact__description{
+  font-size: 15px;
   margin: var(--mb);
+  text-align: center;
 }
 
 .contact__social{
@@ -730,8 +735,188 @@ services__title{
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 
+@media screen and (min-width: 320px){
+  .contact__icon{
+    font-size: 1.2rem;
+  }
+  .contact__title, .contact__description {
+    font-size: 12px;
+    margin: var(--mb);
+  }
+
+  .home__img{
+    bottom: -65px;
+  }
+}
+
 
 /* For medium devices */
 
+@media screen and (min-width: 568px){
+  .home__img img{
+    width: 500px;
+  }
+
+  .about__container, .services__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__img{
+    align-self: center;
+  }
+
+  .contact__form{
+    width: 375px;
+    justify-self: flex-end;
+  }
+
+  .contact__loc-phone{
+    flex-direction: column;
+    column-gap: 30px;
+  }
+
+  .contact__box{
+    margin-bottom: 10p;
+    width: 100%;
+    padding: 25px;
+  }
+
+  .contact__content{
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .contact__loc-phone{
+    width: 100%;
+  }
+
+  .contact__location {
+    margin-bottom: 5px;
+  }
+
+  .contact__input-text{
+    height: 320px;
+  }
+}
+
+@media screen and (min-width: 576px){
+  .home__img img{
+    width: 330px;
+  }
+
+  .about__container, .services__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__form{
+    width: 100%;
+    justify-self: center;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  body {
+    margin: 0
+  }
+
+  .home__img img{
+    width: 540px;
+  }
+
+  .section{
+    padding-top: 6rem;
+  }
+
+  .section-title{
+    margin-bottom: var(--mb-5);
+  }
+
+  .nav{
+    .height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__list{
+    display: flex;
+  }
+
+  .nav__item{
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+
+  .nav__toggle{
+    display: none;
+  }
+
+  .home__container{
+    height: 100vh;
+    grid-template-rows: max-content .5fr;
+    align-content: flex-end;
+  }
+
+  .home__greeting{
+    font-size: 1.25rem;
+  }
+
+  .home__profession{
+    font-size: 2rem;
+  }
+
+  .home__social{
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .home__social-icon{
+    margin-right: var(--mb-4);
+    margin-bottom: 0;
+  }
+
+  .home__-img img{
+    width: 440px
+  }
+
+  .about__description{
+    text-align: initial;
+  }
+
+  .about__img{
+    width: 300px
+  }
+
+  .services__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* For large devices */
+
+@media screen and (min-width: 1024px){
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
