@@ -86,7 +86,6 @@ var modal3 = document.getElementById("myModal3");
 var modal4 = document.getElementById("myModal4");
 
 var modals = document.querySelectorAll(".modal")
-console.log(modals)
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("myBtn1");
