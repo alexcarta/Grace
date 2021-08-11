@@ -1,6 +1,6 @@
 /*GOOGLE FONTS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Raleway:wght@200;500&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -18,7 +18,8 @@
   --first-color-lighten: white;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Comfortaa', cursive;
+  --body-font: 'Montserrat', sans-serif;
+
 ;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
@@ -179,6 +180,7 @@ p{
 
 .nav__item {
   margin-bottom: var(--mb-3);
+  font-size: 12px;
 }
 
 .nav__link {
@@ -193,6 +195,11 @@ p{
 .nav__logo, .nav__toggle {
   color: var(--first-color-lighten);
 }
+
+.nav__logo{
+  font-size: 35px;
+}
+
 
 .nav__toggle{
   font-size: 1.3rem;
@@ -228,14 +235,6 @@ p{
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-/*.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
-  color: var(--first-color-dark);
-}
-*/
-/*.scroll-header .nav__menu{
-  background-color: var(--first-color-lighten);
-}*/
-
 /*==================== HOME ====================*/
 
 .home{
@@ -248,7 +247,7 @@ p{
   height: calc(100vh - var(--header-height));
   grid-template-rows: repeat(2, max-content);
   align-content: space-around;
-  row-gap: 2rem;
+  row-gap: 10rem;
 }
 
 .home__data{
@@ -279,8 +278,7 @@ p{
 .home__img {
   position: absolute;
   right: 0;
-  bottom: 0;
-  margin-bottom: 30px;
+  bottom: 0px;
 }
 
 .home__img img{
@@ -350,44 +348,10 @@ p{
 
 
 /*==================== QUALIFICATION ====================*/
-/*
+
 .qualification__container{
-  row-gap:  2.5rem;
+  padding: 10px;
 }
-
-.qualification__title{
-  font-size: var(--h3-font-size);
-  color: var(--first-color);
-  margin-bottom: var(--mb-2);
-  display: flex;
-  align-items: center;
-}
-
-.qualification__title-icon{
-  font-size: 1.5rem;
-  margin-right: var(--mb-1);
-}
-
-.qualification__box{
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.qualification__area{
-  font-size: var(--normal-font-size);
-  color: var(--first-color);
-  margin-bottom: var(--mb-1);
-  font-weight: var(--font-medium);
-}
-
-.qualification__icon, .qualification__work{
-  font-size: var(--smaller -font-size);
-  color: var(--first-color-light);
-}
-
-.qualification__work{
-  display: block;
-}*/
 
 .qualification__tabs{
   display: flex;
@@ -661,6 +625,7 @@ services__title{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
+  box-shadow: 0 4px 6px rgba(174,190,205,.3)
 }
 
 .contact__input, .contact__button{
@@ -672,7 +637,7 @@ services__title{
 .contact__input{
   width: 100%;
   padding: 1rem;
-  border: 2px solid var(--first-color-lighten);
+  border: none;
   color: var(--first-color);
   border-radius: .5rem;
   margin-bottom: var(--mb-1);
@@ -745,7 +710,7 @@ services__title{
   }
 
   .home__img{
-    bottom: -65px;
+    bottom: -20px;
   }
 }
 
@@ -759,6 +724,7 @@ services__title{
 
   .about__container, .services__container{
     grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
   }
 
   .about__img{
@@ -778,11 +744,11 @@ services__title{
   .contact__box{
     margin-bottom: 10p;
     width: 100%;
-    padding: 25px;
+    padding: 10px;
   }
 
   .contact__content{
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 2fr 4fr;
   }
 
   .contact__loc-phone{
@@ -852,6 +818,7 @@ services__title{
     height: 100vh;
     grid-template-rows: max-content .5fr;
     align-content: flex-end;
+    row-gap: 1rem;
   }
 
   .home__greeting{
@@ -896,10 +863,41 @@ services__title{
     margin-left: auto;
     margin-right: auto;
   }
+
+.home__img{
+  bottom: -60px;
+}
 }
 
 
 
+@media only screen and (min-device-width: 568px) and (min-device-height: 320px){
+  .home__container{
+    row-gap: 0rem;
+  }
+  .home__img img {
+    width: 55%;
+    margin: 0 40%;
+  }
+}
+
+/*IPHONE X*/
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+    .home__data{
+      margin-top: 50px;
+    }
+    h1{
+      font-size: 40px;
+    }
+    .home__greeting, .home__profession {
+      font-size: 1rem;
+    }
+}
 
 
 
