@@ -20,7 +20,7 @@
   /*========== Font and typography ==========*/
   --body-font: 'Montserrat', sans-serif;
 
-;
+  ;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --biggest-font-size: 2.5rem;
@@ -596,6 +596,10 @@ services__title{
   padding: 1rem;
   text-align-last: center;
   box-shadow: 0 4px 6px rgba(174,190,205,.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact__loc-phone {
@@ -818,7 +822,7 @@ services__title{
 
   .home__container{
     height: 100vh;
-    grid-template-rows: max-content .5fr;
+    grid-template-rows: max-content .7fr;
     align-content: flex-end;
     row-gap: 1rem;
   }
@@ -842,7 +846,8 @@ services__title{
   }
 
   .home__-img img{
-    width: 440px
+    margin: 0;
+    width: 100%;
   }
 
   .about__description{
@@ -866,58 +871,53 @@ services__title{
     margin-right: auto;
   }
 
-.home__img{
-  bottom: -60px;
-}
-}
-
-
-
-@media only screen and (min-device-width: 568px) and (min-device-height: 320px){
-  .home__container{
-    row-gap: 0rem;
-  }
-  .home__img img {
-    width: 55%;
-    margin: 0 40%;
+  .home__img{
+    width: 100%;
+    margin: 0;
   }
 }
 
 /*IPHONE X*/
 
 @media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) {
-    .home__data{
-      margin-top: 50px;
-    }
-    h1{
-      font-size: 40px;
-    }
-    .home__greeting, .home__profession {
-      font-size: 1rem;
-    }
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .home__data{
+    margin-top: 50px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  .home__greeting, .home__profession {
+    font-size: 1rem;
+  }
 }
 
 
 /*swiper*/
 
-
-.swiper-wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.swiper-container{
+  position: relative;
+  width: 65%;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.swiper-slide img {
-  height: 600px;
-  width: auto;
-  object-fit: cover;
-  margin: 0 auto;
+.swiper-slide{
+  margin: auto 0;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
+.swiper-icon{
+  color: var(--first-color-light);
+  text-align: center;
+}
 
 
 
