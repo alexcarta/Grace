@@ -131,6 +131,27 @@ span4.onclick = function() {
   modal4.style.display = "none";
 }
 
+// SWIPER
+
+var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop:true,
+        spaceBetween: 32,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
 // ANIMATION
 
 gsap.from('.home__img', {opacity:0, duration:3, delay:0.5, x:60})
