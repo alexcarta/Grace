@@ -4,7 +4,7 @@
 
 /*==================== VARIABLES CSS ====================*/
 :root {
-  --header-height: 3rem;
+  --header-height: 2.5rem;
 
   /*========== Colors ==========*/
   /* Change favorite color */
@@ -197,7 +197,7 @@ p{
 }
 
 .nav__logo{
-  font-size: 35px;
+  font-size: 25px;
 }
 
 
@@ -238,7 +238,7 @@ p{
 /*==================== HOME ====================*/
 
 .home{
-  background-color: #141414;
+  background-color: #0E0E0E;
   overflow: hidden;
 }
 
@@ -724,10 +724,13 @@ services__title{
 /* For medium devices */
 
 @media screen and (min-width: 568px){
-  .home__img img{
-    width: 500px;
+  .home__container{
+    grid-template-rows: none;
   }
-
+  .home__img img {
+    width: 50%;
+    margin: 0 50%;
+  }
   .about__container, .services__container{
     grid-template-columns: repeat(2, 1fr);
     padding: 10px;
@@ -785,14 +788,20 @@ services__title{
   }
 }
 
-
 @media screen and (min-width: 768px){
   body {
     margin: 0
   }
 
-  .home__img img{
-    width: 540px;
+  .home__container{
+    height: 100vh;
+    align-content: flex-end;
+    grid-template-rows: none;
+    padding-bottom: 5px;
+  }
+  .home__img img {
+    width: 50%;
+    margin: 0 50%;
   }
 
   .section{
@@ -820,12 +829,12 @@ services__title{
     display: none;
   }
 
-  .home__container{
+  /*.home__container{
     height: 100vh;
     grid-template-rows: max-content .7fr;
     align-content: flex-end;
     row-gap: 1rem;
-  }
+  }*/
 
   .home__greeting{
     font-size: 1.25rem;
@@ -872,14 +881,13 @@ services__title{
   }
 
   .home__img{
-    width: 100%;
     margin: 0;
   }
 }
 
 /*IPHONE X*/
 
-@media only screen
+/*@media only screen
 and (min-device-width: 375px)
 and (max-device-width: 812px)
 and (-webkit-min-device-pixel-ratio: 3)
@@ -893,8 +901,7 @@ and (orientation: landscape) {
   .home__greeting, .home__profession {
     font-size: 1rem;
   }
-}
-
+}*/
 
 /*swiper*/
 
