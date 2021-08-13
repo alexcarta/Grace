@@ -1,6 +1,6 @@
 /*GOOGLE FONTS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -18,7 +18,7 @@
   --first-color-lighten: white;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Julius Sans One', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
 
   ;
 
