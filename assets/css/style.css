@@ -1,6 +1,6 @@
 /*GOOGLE FONTS*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Raleway:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -18,7 +18,7 @@
   --first-color-lighten: white;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Montserrat', sans-serif;
+  --body-font: 'Julius Sans One', sans-serif;
 
   ;
 
@@ -794,15 +794,23 @@ services__title{
   }
 
   .home__container{
-    height: 100vh;
+    height: 115vh;
     align-content: flex-end;
     grid-template-rows: none;
-    padding-bottom: 5px;
+    padding-bottom: 25px;
   }
   .home__img img {
     width: 50%;
     margin: 0 50%;
   }
+
+  .home__name {
+    font-size: 40px;
+  }
+
+  .home__profession {
+    font-size: 25px;
+}
 
   .section{
     padding-top: 6rem;
@@ -880,30 +888,35 @@ services__title{
     margin-right: auto;
   }
 
-  .home__img{
+  .home__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-auto-rows: minmax(min-content, max-content);
+    height:  100vh;
+  }
+
+  .home__data {
+    margin-top: 0;
+  }
+
+  .home__greeting{
+   font-size: 40px;
+  }
+
+  .home__name{
+    font-size: 100px;
+  }
+
+  .home__profession{
+    font-size: 30px;
+  }
+
+  .home__img img{
     margin: 0;
+    width: 500px;
   }
 }
-
-/*IPHONE X*/
-
-/*@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 812px)
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) {
-  .home__data{
-    margin-top: 50px;
-  }
-  h1{
-    font-size: 40px;
-  }
-  .home__greeting, .home__profession {
-    font-size: 1rem;
-  }
-}*/
-
-/*swiper*/
 
 .swiper-container{
   position: relative;
